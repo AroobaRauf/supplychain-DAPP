@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Supply Chain Audit Trail</title>
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.10.0/dist/web3.min.js"></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <h2>Supply Chain Audit Trail DApp</h2>
+
+  <button onclick="connectWallet()">🔗 Connect Wallet</button>
+  <p id="walletAddress"></p>
+
+  <h3>Add Product</h3>
+  <input type="number" id="productId" placeholder="Product ID">
+  <input type="text" id="productName" placeholder="Product Name">
+  <input type="text" id="productStatus" placeholder="Initial Status">
+  <button onclick="addProduct()">➕ Add</button>
+
+  <h3>Update Product Status</h3>
+  <input type="number" id="updateId" placeholder="Product ID">
+  <input type="text" id="newStatus" placeholder="New Status">
+  <button onclick="updateStatus()">🛠️ Update</button>
+
+  <h3>Get Audit Trail</h3>
+  <input type="number" id="auditId" placeholder="Product ID">
+  <button onclick="getAuditTrail()">📋 View</button>
+  <pre id="auditResult"></pre>
+</body>
+</html>
